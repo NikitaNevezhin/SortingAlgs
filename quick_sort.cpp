@@ -3,9 +3,9 @@
 #include <stdbool.h>
 #include <assert.h>
 
-#define SIZE 10
+#define SIZE 9
 
-void  PrintMatrix           (int* matrix, int length);
+void  PrintArray            (int* matrix, int length);
 
 void  SwapValues            (int* value1, int* value2);
 
@@ -20,22 +20,23 @@ void  ReverseQuickSort      (int* nums, int left, int right);
 
 int main(void)
 {
-    int nums[SIZE] = {10, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    int nums[SIZE] = {-9};
+
 
     QuickSort(nums, 0, SIZE - 1);
 
-    PrintMatrix(nums, SIZE);
+    PrintArray(nums, SIZE);
 
     ReverseQuickSort(nums, 0, SIZE - 1);
 
-    PrintMatrix(nums, SIZE);
+    PrintArray(nums, SIZE);
 
     return EXIT_SUCCESS;
 
 }
 
 
-void PrintMatrix(int* matrix, int length)
+void PrintArray(int* matrix, int length)
 {
     for (int i = 0; i < length; i++)
         printf("%d ", matrix[i]);
@@ -63,7 +64,6 @@ int DivideByEnd(int *nums, int left, int right)
         {
             SwapValues(&nums[i], &nums[less_nums_index]);
             less_nums_index++;
-            // PrintMatrix(nums, 5);
         }
     }
     return less_nums_index - 1;
@@ -103,9 +103,8 @@ void ReverseQuickSort(int* nums, int left, int right)
     if (left < right)
     {
         int division = ReverseDivideByEnd(nums, left, right);
-
-        QuickSort(nums, left, division - 1);
-        QuickSort(nums, division + 1, right);
+        ReverseQuickSort(nums, left, division - 1);
+        ReverseQuickSort(nums, division + 1, right);
     }
 }
 
