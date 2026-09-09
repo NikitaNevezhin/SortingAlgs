@@ -15,7 +15,7 @@ void  QuickSort             (int* nums, int left, int right);
 
 int   ReverseDivideByEnd    (int *nums, int left, int right);
 
-void  ReverseQuickSort      (int* nums, int left, int right);
+void  ReversedQuickSort      (int* nums, int left, int right);
 
 
 int main(void)
@@ -27,7 +27,7 @@ int main(void)
 
     PrintArray(nums, SIZE);
 
-    ReverseQuickSort(nums, 0, SIZE - 1);
+    ReversedQuickSort(nums, 0, SIZE - 1);
 
     PrintArray(nums, SIZE);
 
@@ -98,13 +98,13 @@ void QuickSort(int* nums, int left, int right)  // takes pointers on the part of
     }
 }
 
-void ReverseQuickSort(int* nums, int left, int right)
+void ReversedQuickSort(int* nums, int left, int right)
 {
     if (left < right)
     {
         int division = ReverseDivideByEnd(nums, left, right);
         ReverseQuickSort(nums, left, division - 1);
-        ReverseQuickSort(nums, division + 1, right);
+        ReversedQuickSort(nums, division + 1, right);
     }
 }
 
