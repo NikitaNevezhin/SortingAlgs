@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <assert.h>
 
-#define SIZE 9
+#define SIZE 10
 
 void  PrintArray            (int* matrix, int length);
 
@@ -15,12 +15,12 @@ void  QuickSort             (int* nums, int left, int right);
 
 int   ReverseDivideByEnd    (int *nums, int left, int right);
 
-void  ReversedQuickSort      (int* nums, int left, int right);
+void  ReversedQuickSort     (int* nums, int left, int right);
 
 
 int main(void)
 {
-    int nums[SIZE] = {-9};
+    int nums[SIZE] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 
     QuickSort(nums, 0, SIZE - 1);
@@ -36,16 +36,21 @@ int main(void)
 }
 
 
-void PrintArray(int* matrix, int length)
+void PrintArray(int* nums, int length)
 {
+    assert(nums);
+
     for (int i = 0; i < length; i++)
-        printf("%d ", matrix[i]);
+        printf("%d ", nums[i]);
     printf("\n");
 }
 
 
 void SwapValues(int* value1, int* value2)
 {
+    assert(value1);
+    assert(value2);
+
     int temp = *value1;
     *value1 = *value2;
     *value2 = temp;
@@ -54,6 +59,8 @@ void SwapValues(int* value1, int* value2)
 
 int DivideByEnd(int *nums, int left, int right)
 {
+    assert(nums);
+
     int main_elem = nums[right];
 
     int less_nums_index = left;
@@ -71,6 +78,8 @@ int DivideByEnd(int *nums, int left, int right)
 
 int ReverseDivideByEnd(int *nums, int left, int right)
 {
+    assert(nums);
+
     int main_elem = nums[right];
 
     int less_nums_index = left;
@@ -88,6 +97,7 @@ int ReverseDivideByEnd(int *nums, int left, int right)
 
 void QuickSort(int* nums, int left, int right)  // takes pointers on the part of the array "nums" that should be sorted
 {
+    assert(nums);
 
     if (left < right)
     {
@@ -100,6 +110,8 @@ void QuickSort(int* nums, int left, int right)  // takes pointers on the part of
 
 void ReversedQuickSort(int* nums, int left, int right)
 {
+    assert(nums);
+
     if (left < right)
     {
         int division = ReverseDivideByEnd(nums, left, right);
