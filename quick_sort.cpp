@@ -103,7 +103,7 @@ void ReversedQuickSort(int* nums, int left, int right)
     if (left < right)
     {
         int division = ReverseDivideByEnd(nums, left, right);
-        ReverseQuickSort(nums, left, division - 1);
+        ReversedQuickSort(nums, left, division - 1);
         ReversedQuickSort(nums, division + 1, right);
     }
 }
