@@ -9,7 +9,7 @@ void  PrintArray            (int* matrix, int length);
 
 void  SwapValues            (int* value1, int* value2);
 
-int   DivideByEnd           (int *nums, int left, int right);
+int   DivideByEnd           (int* nums, int left, int right);
 
 void  QuickSort             (int* nums, int left, int right);
 
