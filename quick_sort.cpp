@@ -57,7 +57,7 @@ void SwapValues(int* value1, int* value2)
 }
 
 
-int DivideByEnd(int *nums, int left, int right)
+int DivideByEnd(int* nums, int left, int right)
 {
     assert(nums);
 
@@ -76,7 +76,7 @@ int DivideByEnd(int *nums, int left, int right)
     return less_nums_index - 1;
 }
 
-int ReverseDivideByEnd(int *nums, int left, int right)
+int ReverseDivideByEnd(int* nums, int left, int right)
 {
     assert(nums);
 
