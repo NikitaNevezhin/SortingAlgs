@@ -13,7 +13,7 @@ int   DivideByEnd           (int *nums, int left, int right);
 
 void  QuickSort             (int* nums, int left, int right);
 
-int   ReverseDivideByEnd    (int *nums, int left, int right);
+int   ReverseDivideByEnd    (int* nums, int left, int right);
 
 void  ReversedQuickSort     (int* nums, int left, int right);
 
