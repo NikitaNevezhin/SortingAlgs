@@ -5,7 +5,7 @@
 
 #define SIZE 10
 
-void  PrintArray            (int* matrix, int length);
+void  PrintArray            (int* nums, int length);
 
 void  SwapValues            (int* value1, int* value2);
 
