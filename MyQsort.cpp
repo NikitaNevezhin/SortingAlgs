@@ -9,14 +9,6 @@ void  PrintArray            (int* matrix, int length);
 
 void  SwapValues            (int* value1, int* value2);
 
-int   DivideByEnd           (int* nums, int left, int right);
-
-void  QuickSort             (int* nums, int left, int right);
-
-int   ReverseDivideByEnd    (int* nums, int left, int right);
-
-void  ReversedQuickSort     (int* nums, int left, int right);
-
 int   IsGreater             (int a, int b);
 
 int   IsLess                (int a, int b);
